@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.back{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(148, 235, 255); */
+    background-image: url(https://images.unsplash.com/photo-1468413253725-0d5181091126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #f2f2f2;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+nav .links{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .links a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+    font-size: 14px;
+    font-weight: 500;
+    transition: .5s;
+}
+nav .links a:hover{
+    color: rgb(73, 178, 202) ;
+}
+nav button{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(73, 178, 202) ;
+    border: none;
+    outline: none;
+    color: #ffff;
+    border-radius: 4px;
+}
+nav .menu{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .menu .bars{
+    width: 45px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.sidebar{
+    width: 100%;
+    height: 0px ;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 9999999999;
+    top: 70px;
+    transition: .5s;
+}
+.sidebar ul{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0;
+}
+.sidebar ul li{
+    font-size: 50px;
+    list-style: none;
+}
+.back .ovrly{
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: rgba(0, 0, 0, 0.405);
+    padding: 0 100px;
+}
+.back .ovrly .content{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.back .ovrly .content .details{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.back .ovrly .content .details h2{
+    font-size: 5rem;
+    color: #ffff;
+    letter-spacing: 5px;
+}
+.back .ovrly .content .details p{
+    font-size: 14px;
+    color: #ffff;
+    font-weight: 500;
+}
+.back .ovrly .content .details button{
+    width: 280px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #ffff;
+    color: #ffff;
+    transition: .5s;
+}
+.back .ovrly .content .details button:hover{
+    background-color: rgb(73, 178, 202);
+}
+.back .ovrly .content .social{
+    width: 100px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.back .ovrly .content .social a {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.back .ovrly .content .social a:hover{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.499);
+}
+.back .ovrly .content .social a i{
+    font-size: 20px;
+    color: rgb(73, 178, 202);
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+#sectionOne {
+    margin-bottom: 50px;
+}
+#sectionOne  .top{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+#sectionOne  .bottom{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#sectionOne  .bottom h2{
+    margin-top: 10px;
+}
+#sectionOne  .bottom #card{
+    width: 100%;
+    height: 90%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sectionOne  .bottom #card .cards{
+    width: 420px;
+    height: 95%;
+}
+#sectionOne  .bottom #card .cards .img{
+width: 100%;
+height: 250px;
+overflow: hidden;
+}
+#sectionOne  .bottom #card .cards .txt{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: calc(100% - 250px);
+}
+#sectionOne  .bottom #card .cards .txt h2{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+#sectionOne  .bottom #card .cards .txt p{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#sectionOne  .bottom #card .cards .txt button{
+    width: 120px;
+    height: 35px;
+    background-color: rgb(73, 178, 202) ;
+    border: none;
+    outline: none;
+    color: #ffff;
+}
+#sectionTwo{
+    background-image: url(https://images.unsplash.com/photo-1579184817758-5ed218402277?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNlYSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: grayscale(.8);
+}
+#sectionTwo h2{
+    font-size: 4.5rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+#sectionTwo button{
+    width: 280px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #ffff;
+    color: #ffff;
+    transition: .5s;
+    margin-top: 50px;
+}
+
+#sectionTwo  button:hover{
+    background-color: rgb(73, 178, 202);
+}
+#sectionThree{
+    display: flex;
+}
+#sectionThree .left,#sectionThree .right{
+    width: 50%;
+    height: 100%;
+}
+#sectionThree .left{
+background-image: url(https://images.unsplash.com/photo-1535738434100-112fb21aa536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGNvdXBsZSUyMCUyMGJlYWNoJTIwdmFjYXRpb25zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+#sectionThree .left .border{
+    height: 60px;
+    width: 380px;
+    letter-spacing: 3px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #fff;
+    border-left: none;
+    padding-right: 5px;
+}
+#sectionThree .left .border h2{
+    color: #fff;
+    background-color: rgb(73, 178, 202);
+    height: 40px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sectionThree .right{
+    background-color: rgb(73, 178, 202);   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 4px solid #fff;
+}
+#sectionThree .right .TravelJoy{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#sectionThree .right .TravelJoy h2{
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#sectionThree .right .TravelJoy h4{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+}
+#sectionFour{
+    background-image: url(https://images.unsplash.com/photo-1448518184296-a22facb4446f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGdpcmwlMjB3aXRoJTIwYm9hdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: bottom;
+}
+#sectionFour .adventure{
+width: 350px;
+height: 400px;
+position: absolute;
+bottom: 0;
+right: 0;
+padding-right: 50px;
+padding-top: 60px;
+padding-bottom: 60px;
+text-align: justify;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+#sectionFour .adventure h2{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+#sectionFour .adventure p{
+    color: #fff;
+    letter-spacing: .5px;
+    font-weight: 400;
+    font-size: 15px;
+}
+#sectionFour .ovrly{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(39, 39, 39);
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .left{
+    width: 450px;
+    height: 200px;
+    color: #fff;
+}
+footer .left .details{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+footer .left .details  p{
+    width: 300px;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: .5px;
+}
+footer .left .details .social{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+footer .left .details .social a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+footer .left .contact{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .left .contact p:nth-child(2){
+    margin-top: 10px;
+}
+footer .right{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .right button{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #ffff;
+    color: #ffff;
+    transition: .5s;
+}
+
+footer .right button:hover{
+    background-color: rgb(73, 178, 202);
+}
+#topScroll{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.499);
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
